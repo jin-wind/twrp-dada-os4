@@ -24,6 +24,10 @@ jobs:
           persist-credentials: false
       - name: Prepare ephemeral runner
         run: bash scripts/runner_setup.sh
+      - name: Initialize pinned source tools
+        run: |
+          mkdir -p artifacts
+          bash scripts/init_sources.sh 2>&1 | tee artifacts/init.log
       - name: Download stock firmware and prepare device
         run: |
           mkdir -p artifacts

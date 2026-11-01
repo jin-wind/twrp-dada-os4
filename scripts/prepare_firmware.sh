@@ -2,7 +2,8 @@
 set -euo pipefail
 project="$(cd "$(dirname "$0")/.." && pwd)"
 build_root="${RUNNER_TEMP:?}/dada-os4-build"
-[[ "${GITHUB_ACTIONS:-}" == true && ! -e "$build_root" ]]
+[[ "${GITHUB_ACTIONS:-}" == true && -d "$build_root/source/.repo" ]]
+[[ ! -e "$build_root/device" && ! -e "$build_root/firmware.zip" ]]
 mkdir -p "$build_root" "$project/artifacts"
 cd "$build_root"
 version=OS4.0.0.11.XOCMIXM
