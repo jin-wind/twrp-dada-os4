@@ -12,7 +12,8 @@ timeout 25m aria2c --split=16 --max-connection-per-server=16 --min-split-size=4M
   --lowest-speed-limit=128K --max-tries=3 --retry-wait=5 \
   --auto-file-renaming=false --allow-overwrite=true \
   --console-log-level=warn --summary-interval=30 --download-result=full \
-  --out=firmware.zip "https://hugeota.d.miui.com/$version/$package" \
+  --out=firmware.zip "https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/$version/$package" \
+  "https://hugeota.d.miui.com/$version/$package" \
   "https://bigota.d.miui.com/$version/$package"
 [[ "$(stat -c %s firmware.zip)" == 8766363938 ]]
 python3 "$project/scripts/extract_payload.py" --package firmware.zip \
