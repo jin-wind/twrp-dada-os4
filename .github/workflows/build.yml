@@ -1,0 +1,39 @@
+name: Build dada OS4 experimental TWRP
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dada-os4-build
+  cancel-in-progress: false
+
+jobs:
+  recovery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Prepare ephemeral runner
+        run: bash scripts/runner_setup.sh
+      - name: Download stock firmware and prepare device
+        run: |
+          mkdir -p artifacts
+          bash scripts/prepare_firmware.sh 2>&1 | tee artifacts/prepare.log
+      - name: Sync pinned Android and TWRP source
+        run: bash scripts/sync_sources.sh 2>&1 | tee artifacts/sync.log
+      - name: Build and inspect recovery image
+        run: bash scripts/build.sh 2>&1 | tee artifacts/build.log
+      - name: Upload image and diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: dada-os4-exp1-${{ github.run_id }}
+          path: artifacts/
+          retention-days: 7
+          compression-level: 1
+          if-no-files-found: warn

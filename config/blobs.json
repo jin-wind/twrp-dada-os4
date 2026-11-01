@@ -1,0 +1,1155 @@
+[
+  {
+    "target": "odm/bin/hw/android.hardware.weaver-service",
+    "source": "odm/bin/hw/android.hardware.weaver-service.thales",
+    "source_sha256": "a777765e942376645eaa90eae17dd9b8e68084db7910e2f68a71ab3c1e1df9cc",
+    "old_sha256": "0e25ea7c6e740ddba4838b044f554fa5636ee68fb3ee5c650b190e0bde74a5f6",
+    "elf_patches": [
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service",
+    "source": "odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service",
+    "source_sha256": "84cb0f2cbd391eff1e56efd46900ee642c173f07f96e9d9215a24933aa7f0b9c",
+    "old_sha256": "d2e14c1eec0c00cbf3085197bc5898eb0c75103fd1c5aa2578754c99daa12ca3",
+    "elf_patches": [
+      {
+        "replace_needed": [
+          "android.hardware.vibrator-V1-ndk_platform.so",
+          "android.hardware.vibrator-V1-ndk.so"
+        ]
+      },
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "odm/lib64/ese_weaver_thales.so",
+    "source": "odm/lib64/ese_weaver_thales.so",
+    "source_sha256": "9fdd1720f04b0521664be7c5e45156c88465c5d3b79b02b9d6b99919d7c59a1f",
+    "old_sha256": "9fdd1720f04b0521664be7c5e45156c88465c5d3b79b02b9d6b99919d7c59a1f",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/lib64/libtensorflowlite_touch_c.so",
+    "source": "odm/lib64/libtensorflowlite_touch_c.so",
+    "source_sha256": "22226ab82e34c88e69d808a63ec0952d1a83065a64173020b6f562d28a2dfb20",
+    "old_sha256": "22226ab82e34c88e69d808a63ec0952d1a83065a64173020b6f562d28a2dfb20",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/dada_syna_thp_config_00.ini",
+    "source": "odm/firmware/dada_syna_thp_config_00.ini",
+    "source_sha256": "ad07796c023bb70f891070fe86451f8484affc84a973727355adf1e04e63153e",
+    "old_sha256": "ad07796c023bb70f891070fe86451f8484affc84a973727355adf1e04e63153e",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/dada_syna_thp_config_01.ini",
+    "source": "odm/firmware/dada_syna_thp_config_01.ini",
+    "source_sha256": "344668b54f4f5b7d472cc15b3ce7f66749cad60a09c6f6d9ad0701488a75ef15",
+    "old_sha256": "344668b54f4f5b7d472cc15b3ce7f66749cad60a09c6f6d9ad0701488a75ef15",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/dada_test_limits_S3910P_00.csv",
+    "source": "odm/firmware/dada_test_limits_S3910P_00.csv",
+    "source_sha256": "59af0c79a8cfb44962cd11efda040e75f8cea9f20215a0832bd01fb1e2fd5059",
+    "old_sha256": "25d3e7ba54ea56a7af2540c30bcec8e77ccb3d02d5235fcd9bf49c9775f98c2b",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/dada_test_limits_S3910P_01.csv",
+    "source": "odm/firmware/dada_test_limits_S3910P_01.csv",
+    "source_sha256": "850558549fdf21817d9bbe38a674296caf8df6c4126556b1d6d3539eae0afd1d",
+    "old_sha256": "ce6f15a05e6ad65cae6e21c33bbadbea38a5cc7136ee7d01c6c1d92c82254f56",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/film_model.tflite",
+    "source": "odm/firmware/film_model.tflite",
+    "source_sha256": "21e1acd5e8b8ef2da82e833c76c316c370be1cbe3734d8fdc77ead98c2ddafbe",
+    "old_sha256": "21e1acd5e8b8ef2da82e833c76c316c370be1cbe3734d8fdc77ead98c2ddafbe",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/glove_model.tflite",
+    "source": "odm/firmware/glove_model.tflite",
+    "source_sha256": "3d9a4c901a58213cf7a1022b4eb0f522b84722caca2e7ec4e87e7049991f77f8",
+    "old_sha256": "3d9a4c901a58213cf7a1022b4eb0f522b84722caca2e7ec4e87e7049991f77f8",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/smooth.tflite",
+    "source": "odm/firmware/smooth.tflite",
+    "source_sha256": "877eab494b647575261820ecdbb8702432b58c63e3fc2fa36fa3104e55f57d19",
+    "old_sha256": "877eab494b647575261820ecdbb8702432b58c63e3fc2fa36fa3104e55f57d19",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/synaptics_spi_dada_00.img",
+    "source": "odm/firmware/synaptics_spi_dada_00.img",
+    "source_sha256": "e32da8dc9c176dd35d22a1643beb343ff501082b3fa9f28e716b9df52c46e5c7",
+    "old_sha256": "e32da8dc9c176dd35d22a1643beb343ff501082b3fa9f28e716b9df52c46e5c7",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/synaptics_spi_dada_01.img",
+    "source": "odm/firmware/synaptics_spi_dada_01.img",
+    "source_sha256": "2f439069c44e5d626a0fb6ea5fc3a044792c79794f6606e414d983e5dad42d1f",
+    "old_sha256": "2f439069c44e5d626a0fb6ea5fc3a044792c79794f6606e414d983e5dad42d1f",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/firmware/water_check.tflite",
+    "source": "odm/firmware/water_check.tflite",
+    "source_sha256": "7616dd1b1f8076cb1867d64e3be1796fb27e24fe7023746b08894e4e82fa6ffa",
+    "old_sha256": "7616dd1b1f8076cb1867d64e3be1796fb27e24fe7023746b08894e4e82fa6ffa",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/lib64/libaachaptics.so",
+    "source": "odm/lib64/libaachaptics.so",
+    "source_sha256": "4b3da802e88c8aab313a82ad5a93752d641dc33a62d68ec32741631c6c84a550",
+    "old_sha256": "4b3da802e88c8aab313a82ad5a93752d641dc33a62d68ec32741631c6c84a550",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/lib64/libtouchreport.so",
+    "source": "odm/lib64/libtouchreport.so",
+    "source_sha256": "9fc3e8a83a8b4b4d883ed581f820ee1b1f289b177cee8fb2f53f63cbf144ea1a",
+    "old_sha256": "12e76a9968191a818fda53b30a55d44eff4f7dfc80e0b8724c454a2343452d4f",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/lib64/libtouchreport_alg.so",
+    "source": "odm/lib64/libtouchreport_alg.so",
+    "source_sha256": "0d27abbf132fd1c91bcf472d6f2b4eb7f096efce0fe798b62a6eca9d5a35d347",
+    "old_sha256": "75e750d7df3451eb6dc6171f38f5977dd6aad5ae2a1d919249ebb68542db3617",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/lib64/libtouchreport_hal.so",
+    "source": "odm/lib64/libtouchreport_hal.so",
+    "source_sha256": "c0660b7e372cc7557d0b2e9edfe3a5ccf1c3b9097652e370ba71973550b1cb97",
+    "old_sha256": "c6fd4ce6584d061ca8f4ecd3e5414c366c52045a73686be6a7dc795981bfd13b",
+    "elf_patches": []
+  },
+  {
+    "target": "odm/variant/dada/odm/lib64/libtouchreport_sensor.so",
+    "source": "odm/lib64/libtouchreport_sensor.so",
+    "source_sha256": "dfdc591ab08962713fd25c1abade6dcc5f3fe73001fa18edcaddddea681ef174",
+    "old_sha256": "af01b14cff8fe1d20815142b2fdad76c22bab76186135bf203268f9128289dea",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/bin/hw/android.hardware.boot-service.qti",
+    "source": "vendor/bin/hw/android.hardware.boot-service.qti",
+    "source_sha256": "1d1d1bf71b261347bd5bf163bb443b7a32ca1a46094cb0f251b9ad6a60cba901",
+    "old_sha256": "500b618c792c8903de66710dea3d044efdc1fe7ca3a527550879f77a13ccda3f",
+    "elf_patches": [
+      {
+        "add_needed": "libbase-sdk35.so"
+      },
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/bin/hw/android.hardware.gatekeeper-service-qti",
+    "source": "vendor/bin/hw/android.hardware.gatekeeper-service-qti",
+    "source_sha256": "c66d485ff028a8ca7185f302e11d9ee846ffcc71b3cf9ce3bd9b0f7cf868728b",
+    "old_sha256": "dc1d06929c9bf52f4bec9623525a444906ceff771cc091f7d0ab7472f0c750aa",
+    "elf_patches": [
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/bin/hw/android.hardware.health-service.qti",
+    "source": "vendor/bin/hw/android.hardware.health-service.qti",
+    "source_sha256": "6ccf8ee609843187762a6bbe6152dbde49af63205ce8215afc37e736be110c3c",
+    "old_sha256": "fa4dacf6fc574a5ef2b105bbf9b51ab9da9f1cd757e7d3a2bb63c58b2c47f5d7",
+    "elf_patches": [
+      {
+        "add_needed": "libcxx.so"
+      },
+      {
+        "add_needed": "libbase-sdk35.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/bin/hw/android.hardware.secure_element-service.qti",
+    "source": "vendor/bin/hw/android.hardware.secure_element-service.qti",
+    "source_sha256": "b243dfbf4ebef65567acbf5b38df19175684590746695412488086f7d63c31d3",
+    "old_sha256": "19120a4600e5afdb41cd703034dff8aed32d69d21b9d4ad970256251ae7b3a70",
+    "elf_patches": [
+      {
+        "add_needed": "libcxx.so"
+      },
+      {
+        "add_needed": "libbase-sdk35.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/bin/hw/android.hardware.security.keymint-service-qti",
+    "source": "vendor/bin/hw/android.hardware.security.keymint-service-qti",
+    "source_sha256": "bc3c6361a7d3e67385d1001f56891e1b49094ae9243530e05dc9a2c7c6acbd91",
+    "old_sha256": "9526706029987ee5d08cf5035fe7a4ccc7208e9fcc1518b7b9e0a4c788f40056",
+    "elf_patches": [
+      {
+        "replace_needed": [
+          "libbinder_ndk.so",
+          "libbinder_ndk-sdk35.so"
+        ]
+      },
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/bin/qseecomd",
+    "source": "vendor/bin/qseecomd",
+    "source_sha256": "dc1ccdd0a32891f0f38048383499e8849e071840ef5bb210eefa1b0e3b2c369f",
+    "old_sha256": "6c212d4d600518d1f086fea66fd4d02a4544f19a3f4cb123b78c2feed4809385",
+    "elf_patches": [
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/bin/ssgtzd",
+    "source": "vendor/bin/ssgtzd",
+    "source_sha256": "b3ebfd88f631407b5aaaefc5c0badf264c950e3ba8130cbf28a5ec0c3d5bc442",
+    "old_sha256": "9f4dfea43683867e105cd18e1543edfef8c6dd4145e2461cf1170f1e4153118f",
+    "elf_patches": [
+      {
+        "add_needed": "libcxx.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b00",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b00",
+    "source_sha256": "43f5ede83d0b9f68bb6d94481bc57876af763b7e82fd494e6da077adf4dea782",
+    "old_sha256": "9f0ebe89a9ec558129f0d2f1846d706d965bbcf5f54d4862e6b3e42edac4e254",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b01",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b01",
+    "source_sha256": "c5ec2406f2e7b2af02e94528b4309965ce3779e1c35dd92515b673db1efeefeb",
+    "old_sha256": "5855a3856a119d2c84383628b882c3a3bc07d022255ff0754fe63e74d3f8348c",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b02",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b02",
+    "source_sha256": "0379292699620201956b650c7b3488434e51ed61496a78da7cad0bd3064f2b8d",
+    "old_sha256": "212d1ca51a58a2ee762584087954c67cf4ed28ad4789860aec444d6b9fc82ced",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b03",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b03",
+    "source_sha256": "200470509f0f92b844b33177d824ec6f7a453b6d38e249da077bf3ab911956a8",
+    "old_sha256": "b5d07873956b3587eb59677fdce23e4618cf383c721449d6bf7869eb986e3123",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b04",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b04",
+    "source_sha256": "0357ceaa7d018f9af77ef6d8641f061998f5805d7d11c04dfc50ebc549583965",
+    "old_sha256": "9314cba528f763132ab02d6aa2f83b8d802aa1489c11e240e977c7ddaec99034",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b05",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b05",
+    "source_sha256": "b1649d2631549792ea6b6b2e3db95996920cd627fa6eac85b7ab23723e7cc65a",
+    "old_sha256": "4ba8e0cd5def2a7171cc8657711f489f5a2baadbdff8a79a929ab41f390d7f85",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b06",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b06",
+    "source_sha256": "245ddd18cba54163b852a2a60fb054fafe04183132916eb5f831e9e04823972d",
+    "old_sha256": "3383d996468def1f7fb9eef35e23dd11c04a3e46e05da8c778cb29a995e69c14",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b07",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b07",
+    "source_sha256": "200470509f0f92b844b33177d824ec6f7a453b6d38e249da077bf3ab911956a8",
+    "old_sha256": "b5d07873956b3587eb59677fdce23e4618cf383c721449d6bf7869eb986e3123",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b08",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.b08",
+    "source_sha256": "d7f8a2a86ddf871ec89862524d7ae4a076bad0ca9697e99c57dc406dc0322733",
+    "old_sha256": "545db12bd2c7fa23c7c09f15c47ad8bf2b6128ef6bb710afaaf89354de9f35f6",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.mdt",
+    "source": "modem/image/32552B22-89FE-42B4-8A45-A0C4E2DB0326.mdt",
+    "source_sha256": "f3b2e38b5ad7c50e26a08f9f3812b1c04b38dbe07da2d004a0a73264dd0cbd86",
+    "old_sha256": "6cf85c01ecdd54d04a34f3be0ffbc85c1d63e6c4daa727fca0a958b66517bec6",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b00",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b00",
+    "source_sha256": "d8b6a0ca2306d171aad7a2ea8294276aeac20f8106911ff5e60bc315774a6ab2",
+    "old_sha256": "b9f140e645a2832532a2340c95ffb34f0a7fd8bc9d95c3e1d92c0dfaf17b83a1",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b01",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b01",
+    "source_sha256": "5718eedc3def44c2cd895da37ffde1ac135468b6ed371d86aa6bd89fa973e186",
+    "old_sha256": "2e585564d2bce08b5e14fa9890558e5ec21834c06810844b5f841f43b174fbc8",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b02",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b02",
+    "source_sha256": "2edb200502ac370ebcc41da3b37073633f26fb7c7142f4650ddb8c7ac4e18ae7",
+    "old_sha256": "2edb200502ac370ebcc41da3b37073633f26fb7c7142f4650ddb8c7ac4e18ae7",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b03",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b03",
+    "source_sha256": "4dae3a55e5cc96b9787c29185910fa5cacd131ad9da858f101650e557da9537e",
+    "old_sha256": "531894b25c23721ae317574bd89480db44df2268047e6310c39ebfa92b80b8df",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b04",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b04",
+    "source_sha256": "cf23a5536a9645381349c18f5c7aa993d4383771984dad4ef039fd9e3ef30c7a",
+    "old_sha256": "cf23a5536a9645381349c18f5c7aa993d4383771984dad4ef039fd9e3ef30c7a",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b05",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b05",
+    "source_sha256": "b3df7731d3a9bbdffc0e590e2a80846e7aa4fff640c359fbea9d5cca619ae9bd",
+    "old_sha256": "14824df9a01b38059a591d5a3b28f9fc1ac467fa6a70eb6370128941b8472095",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b06",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b06",
+    "source_sha256": "9e27fcef4656e6f81f71415b25bf114ae1e059a64f095cd6561347c5dc058251",
+    "old_sha256": "b9f5d0067ec7d06500b5795d345e0e77500f19ddb9995f590a40c8257dc3b554",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b07",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b07",
+    "source_sha256": "4dae3a55e5cc96b9787c29185910fa5cacd131ad9da858f101650e557da9537e",
+    "old_sha256": "531894b25c23721ae317574bd89480db44df2268047e6310c39ebfa92b80b8df",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b08",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.b08",
+    "source_sha256": "8f6bbc5b01476868f16b329e7d85f685da376ef4b0a51200c809c23af384b18b",
+    "old_sha256": "62f314d7b92618ee69110143395ae83bbeccd34f1c5959bc754b0756aece42d8",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/firmware_mnt/image/FD719D50-FFFB-11EB-9A03-0242AC130003.mdt",
+    "source": "modem/image/FD719D50-FFFB-11EB-9A03-0242AC130003.mdt",
+    "source_sha256": "2b17d72e1a6062a32bdcef38b9e9da33ef22726ff9183482b8fa84a7c35e7f76",
+    "old_sha256": "0ea44affc8ff8243fb5e0d742f5b75a6edb1c84524443fc67158b4c55b0a8254",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.frameworks.sensorservice-V1-ndk.so",
+    "source": "vendor/lib64/android.frameworks.sensorservice-V1-ndk.so",
+    "source_sha256": "620d046626715be0ce8f3de74a0e2c863f5d175a2ac2ec1697f63af87c58dbbb",
+    "old_sha256": "620d046626715be0ce8f3de74a0e2c863f5d175a2ac2ec1697f63af87c58dbbb",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.frameworks.sensorservice@1.0.so",
+    "source": "vendor/lib64/android.frameworks.sensorservice@1.0.so",
+    "source_sha256": "3e49daa2a3896d9f3f5f24b1534e97b18f80c60d4726ade44cdb0921a1f88d65",
+    "old_sha256": "3e49daa2a3896d9f3f5f24b1534e97b18f80c60d4726ade44cdb0921a1f88d65",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.common-V2-ndk.so",
+    "source": "vendor/lib64/android.hardware.common-V2-ndk.so",
+    "source_sha256": "df669f6139af9370a003bcc7f11ef3ef9a96b5b2044b11f42d77611c871dd7e2",
+    "old_sha256": "df669f6139af9370a003bcc7f11ef3ef9a96b5b2044b11f42d77611c871dd7e2",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.common.fmq-V1-ndk.so",
+    "source": "vendor/lib64/android.hardware.common.fmq-V1-ndk.so",
+    "source_sha256": "56bcb195fc2749c67e0eb7f2da7f47fa1a3aedfc54059f12867446a6ff010bd0",
+    "old_sha256": "56bcb195fc2749c67e0eb7f2da7f47fa1a3aedfc54059f12867446a6ff010bd0",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.gatekeeper-V1-ndk.so",
+    "source": "vendor/lib64/android.hardware.gatekeeper-V1-ndk.so",
+    "source_sha256": "795692e33b6242c316233141f1a71fc2b2dea3209fcd117678bf8bae0f350dbf",
+    "old_sha256": "795692e33b6242c316233141f1a71fc2b2dea3209fcd117678bf8bae0f350dbf",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.nfc-V1-ndk.so",
+    "source": "vendor/lib64/android.hardware.nfc-V1-ndk.so",
+    "source_sha256": "5f60f6f64f43897586cc4f7bf0dd70e1b5f964232244aefd78e7426550b86032",
+    "old_sha256": "5f60f6f64f43897586cc4f7bf0dd70e1b5f964232244aefd78e7426550b86032",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.secure_element@1.0.so",
+    "source": "vendor/lib64/android.hardware.secure_element@1.0.so",
+    "source_sha256": "e5f476403e682ccd2feae3dc66327b559e1509c43c2c3d766d5dfb856a4c789b",
+    "old_sha256": "e5f476403e682ccd2feae3dc66327b559e1509c43c2c3d766d5dfb856a4c789b",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.secure_element@1.1.so",
+    "source": "vendor/lib64/android.hardware.secure_element@1.1.so",
+    "source_sha256": "2e350220dac361e067483f59a1bab02162b5ac45352ba8ebd8e7117beb5a951b",
+    "old_sha256": "2e350220dac361e067483f59a1bab02162b5ac45352ba8ebd8e7117beb5a951b",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.secure_element@1.2.so",
+    "source": "vendor/lib64/android.hardware.secure_element@1.2.so",
+    "source_sha256": "35ad974b93c130a317f7964796a069d0970ea77e576266a23f890948000af5c1",
+    "old_sha256": "35ad974b93c130a317f7964796a069d0970ea77e576266a23f890948000af5c1",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.security.keymint-V1-ndk.so",
+    "source": "vendor/lib64/android.hardware.security.keymint-V1-ndk.so",
+    "source_sha256": "70d7cf223078dd76f48d24a9b45964d341465aa579046a345e41a2361064ef71",
+    "old_sha256": "a511b747d37312f6fe2cbbfee056aa2c21e09b655fabd883663e754c99779287",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.security.keymint-V3-ndk.so",
+    "source": "vendor/lib64/android.hardware.security.keymint-V3-ndk.so",
+    "source_sha256": "7950e98e8e8332349de40d12cbcef821dffd26a2f2becef05bb3c8972f2fa9e0",
+    "old_sha256": "7950e98e8e8332349de40d12cbcef821dffd26a2f2becef05bb3c8972f2fa9e0",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.security.rkp-V3-ndk.so",
+    "source": "vendor/lib64/android.hardware.security.rkp-V3-ndk.so",
+    "source_sha256": "ab8d1881e8f2d7cab1ccd85a9ad415e23c50e5de60a524217b0f2cf04ea27dab",
+    "old_sha256": "ab8d1881e8f2d7cab1ccd85a9ad415e23c50e5de60a524217b0f2cf04ea27dab",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.security.secureclock-V1-ndk.so",
+    "source": "vendor/lib64/android.hardware.security.secureclock-V1-ndk.so",
+    "source_sha256": "7f4b78b18f472c49764476f42e3098c4ce5096aa4baf25cff84723a66eb39161",
+    "old_sha256": "7f4b78b18f472c49764476f42e3098c4ce5096aa4baf25cff84723a66eb39161",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so",
+    "source": "vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so",
+    "source_sha256": "a96f63db13d43b581d820be552a5ae07ed80a66aa2837ed8828542a100696563",
+    "old_sha256": "a96f63db13d43b581d820be552a5ae07ed80a66aa2837ed8828542a100696563",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.sensors-V2-ndk.so",
+    "source": "vendor/lib64/android.hardware.sensors-V2-ndk.so",
+    "source_sha256": "375e85e45574b373f04bf14449b390218fefe20d88abd83dd8718045ab06cce4",
+    "old_sha256": "375e85e45574b373f04bf14449b390218fefe20d88abd83dd8718045ab06cce4",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.sensors@1.0.so",
+    "source": "vendor/lib64/android.hardware.sensors@1.0.so",
+    "source_sha256": "f20a2d1c08166efb1c66dee5b462fc5657d412e3cee8c6a0d71e04c57bdd3ac5",
+    "old_sha256": "f20a2d1c08166efb1c66dee5b462fc5657d412e3cee8c6a0d71e04c57bdd3ac5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.sensors@2.0.so",
+    "source": "vendor/lib64/android.hardware.sensors@2.0.so",
+    "source_sha256": "ad01c3bae298c3a62445a61f068b8c6520d492c1e9df0e6be44033663095a2a3",
+    "old_sha256": "ad01c3bae298c3a62445a61f068b8c6520d492c1e9df0e6be44033663095a2a3",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.weaver-V2-ndk.so",
+    "source": "vendor/lib64/android.hardware.weaver-V2-ndk.so",
+    "source_sha256": "8551dca902701714be62e00362ecd9e369a8f01c6aabc00bb799a69b9c917e97",
+    "old_sha256": "8551dca902701714be62e00362ecd9e369a8f01c6aabc00bb799a69b9c917e97",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.system.keystore2-V1-ndk.so",
+    "source": "vendor/lib64/android.system.keystore2-V1-ndk.so",
+    "source_sha256": "6f8550bc40fba4e589580b8b2e9e96941132dba64b01f5aa7cb848ec80cdc276",
+    "old_sha256": "9683741222b0896b6d7c24ccee68f017142044969e549fb6f332e300c614bc8f",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/hw/libEseUtils.so",
+    "source": "vendor/lib64/hw/libEseUtils.so",
+    "source_sha256": "ade55752e25f0b29285ea2af29313a8026f1b8a0693105bc692ece637fa3b081",
+    "old_sha256": "8fec8ea6549178d36c29220e46bbda99c653483f8791255ea04354c9057a41fa",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/hw/libqtigatekeeper.so",
+    "source": "vendor/lib64/hw/libqtigatekeeper.so",
+    "source_sha256": "db1effbbf9f3b2c6c73cd490020eed78c0ac549c9674abab56f2940afa67a06d",
+    "old_sha256": "db1effbbf9f3b2c6c73cd490020eed78c0ac549c9674abab56f2940afa67a06d",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libGPMTEEC_vendor.so",
+    "source": "vendor/lib64/libGPMTEEC_vendor.so",
+    "source_sha256": "48ded0c8c109e26d75e9c8dd76611830eb4f5f75167e2676610ef5409cf29117",
+    "old_sha256": "780ed7ca25e8e68b4a895c922932cfc1764941703712d35fae9ed00b1ad5636a",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libGPQeSE.so",
+    "source": "vendor/lib64/libGPQeSE.so",
+    "source_sha256": "cd085afae7b26d98955b69d46686e649e630370397c63cc4afa26642a484cfc8",
+    "old_sha256": "a284acd77977b4e9e21990443790a9f9a6de976cb87a83c48bf491e5a44ad68c",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libGPTEE_vendor.so",
+    "source": "vendor/lib64/libGPTEE_vendor.so",
+    "source_sha256": "48b5450cdf8276cb99e9d1e213abf3eec803d7a0d80dadf08a3f0cc7f9cd0f13",
+    "old_sha256": "effbb081f77277eec0035c7d42e66310b395a5cc4718af7fb82390a29e0a3e44",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libGPreqcancel.so",
+    "source": "vendor/lib64/libGPreqcancel.so",
+    "source_sha256": "046bef8934572136ec2634cc520b19cb8554c76c05d129e9d25e8479e30e6478",
+    "old_sha256": "046bef8934572136ec2634cc520b19cb8554c76c05d129e9d25e8479e30e6478",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libGPreqcancel_svc.so",
+    "source": "vendor/lib64/libGPreqcancel_svc.so",
+    "source_sha256": "935b297c1fd1e4f0a81f4e9a68752639da0ee33dd1f8803576a69aca3cd7c516",
+    "old_sha256": "e4f3f3bddb2b116af898e7e7b8c94800bbfce6814e28687bd1c5a9a5e21acedb",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libQSEEComAPI.so",
+    "source": "vendor/lib64/libQSEEComAPI.so",
+    "source_sha256": "976efbf00b87fb5ab7e8d57d4fe0717fc4e2ea839cda6c517ec9868f6ce6fbd2",
+    "old_sha256": "14a7c84db9661851d5c07dfe1532d5b7c7f5ce7497fdaae550c517b3ef767981",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/lib_android_keymaster_keymint_utils.so",
+    "source": "vendor/lib64/lib_android_keymaster_keymint_utils.so",
+    "source_sha256": "061acab04007c7df1a9ca5d4f7ef5dd5bef9eae95abc9ece2268bb77337be6bc",
+    "old_sha256": "061acab04007c7df1a9ca5d4f7ef5dd5bef9eae95abc9ece2268bb77337be6bc",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libagmmixer.so",
+    "source": "vendor/lib64/libagmmixer.so",
+    "source_sha256": "60931d15b08173d8fc6ba0b0dfca0d4830aac1c4d7705d57e1320a3f6a51de26",
+    "old_sha256": "98b1c0a716c8d139a943a49ed1cec114758ac03eaf0d03f8059c3b814c4eda9e",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libboot_control_qti.so",
+    "source": "vendor/lib64/libboot_control_qti.so",
+    "source_sha256": "3d9ec25d7fac980dd5d629262a8a385423420c48d9ee0dc6756ad1b46dc5bf5e",
+    "old_sha256": "8028faeaac72c74b36272efbd28ffb7d2d50e631d5fbc9a94c7b372be02cf640",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libconfigdb.so",
+    "source": "vendor/lib64/libconfigdb.so",
+    "source_sha256": "7c3275649db8e7a75521e4adf6a4437b834bdfcf2066508c5d62ee5615ab5055",
+    "old_sha256": "252e0ee5f3514806258de88cbb2a02342186374d1f3f7930f378c8474b8b387f",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libcppbor.so",
+    "source": "vendor/lib64/libcppbor.so",
+    "source_sha256": "4080654cd8cc68220589a20b033ce557f5908e778bb0403c94b893be5dcde317",
+    "old_sha256": "4080654cd8cc68220589a20b033ce557f5908e778bb0403c94b893be5dcde317",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libcppbor_external.so",
+    "source": "vendor/lib64/libcppbor_external.so",
+    "source_sha256": "8a13c6c1d8352fb2d4f3bd01855f827a273b235a1c5d78e645cff00859a41a70",
+    "old_sha256": "8a13c6c1d8352fb2d4f3bd01855f827a273b235a1c5d78e645cff00859a41a70",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libcppcose_rkp.so",
+    "source": "vendor/lib64/libcppcose_rkp.so",
+    "source_sha256": "23a81e2db7a9d25e04887f1be8eaa2b1efb4d84df8a327cc94c5050887175922",
+    "old_sha256": "23a81e2db7a9d25e04887f1be8eaa2b1efb4d84df8a327cc94c5050887175922",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdiag.so",
+    "source": "vendor/lib64/libdiag.so",
+    "source_sha256": "64865d8b2cf5e94d36049fe61829595fbfcd93f261f9bac65952c11203c7a6f5",
+    "old_sha256": "8b315eb6ac651635736c46c2daf57c4a782b423030602925b83413b67e531a60",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdisplayconfig.qti.so",
+    "source": "vendor/lib64/libdisplayconfig.qti.so",
+    "source_sha256": "d651db014b72837e1b9a272f655ef519ec82c3c9a1edc26860a081210a11a561",
+    "old_sha256": "d651db014b72837e1b9a272f655ef519ec82c3c9a1edc26860a081210a11a561",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdmabufheap.so",
+    "source": "vendor/lib64/libdmabufheap.so",
+    "source_sha256": "f959ad4ddd52fb5acdbb4159155a14393d0d4a9cc3c69af75c1097484db9d93d",
+    "old_sha256": "c538c310615284e1ba80935b451228152a99ed749fe31b953329cdd01450ec79",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdrm.so",
+    "source": "vendor/lib64/libdrm.so",
+    "source_sha256": "d83c6d0a0db0c2c738f47c550d569c898585966e7fee900ad9c2c16503b08bae",
+    "old_sha256": "d83c6d0a0db0c2c738f47c550d569c898585966e7fee900ad9c2c16503b08bae",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdrmfs.so",
+    "source": "vendor/lib64/libdrmfs.so",
+    "source_sha256": "43fffc02c499948537a65dd5c77bc3bc451f71d88a040cadbcd45fb76305f38d",
+    "old_sha256": "812ac0e0e1be9452c1bf9925cea360e47861d639aeb149426bc8287cab410bb5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdrmtime.so",
+    "source": "vendor/lib64/libdrmtime.so",
+    "source_sha256": "8ebb95f17b202725e68523aa90b38dc25e52ab78fe1338743370080bdce3672a",
+    "old_sha256": "7a04a918b6e93fe6df7560ccc68c0befca1fc052ac9e717abb34e2fcdcc99f0c",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdsi_netctrl.so",
+    "source": "vendor/lib64/libdsi_netctrl.so",
+    "source_sha256": "6c3a03111a8df32d79bf7f1a7cffc93c4809b0abdc7af1670a3777184bc77224",
+    "old_sha256": "95e585d256b7106d7a592c01a4055ccb16e01c36df882d91586d9ccdd801fc44",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libdsutils.so",
+    "source": "vendor/lib64/libdsutils.so",
+    "source_sha256": "80d567cda7eb8162f68e30bd3eb32a35d0c82376497e9ac3d732bd1f88d8b80b",
+    "old_sha256": "14bf7cc127009cdbee1dcbf5069da5a83b56aec85dcefd5ccab6cd02356798b2",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libfmq.so",
+    "source": "vendor/lib64/libfmq.so",
+    "source_sha256": "df4f4b70665c4c9db768e35522d0ae424aeafd21ef39a864d5f3efc2487bcfb0",
+    "old_sha256": "df4f4b70665c4c9db768e35522d0ae424aeafd21ef39a864d5f3efc2487bcfb0",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libgpt.so",
+    "source": "vendor/lib64/libgpt.so",
+    "source_sha256": "8ffa246174bb26347f51767c2e08dc2526519c178b456d49b2d872a3f81326ec",
+    "old_sha256": "023f3fe9c1c01a35a6f24d142da38d33bc2eb267696355dca342deabfcf8993a",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libidl.so",
+    "source": "vendor/lib64/libidl.so",
+    "source_sha256": "d7b27ec5ec6c19738aae0a799d3818496ef9e70743dea1c8fb22897e96802dfc",
+    "old_sha256": "d7b27ec5ec6c19738aae0a799d3818496ef9e70743dea1c8fb22897e96802dfc",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libion.so",
+    "source": "vendor/lib64/libion.so",
+    "source_sha256": "ac579c511253adc1d7822dde28a3e174450f5a4d22ab218727757ebee21a67a7",
+    "old_sha256": "b43c91ddec752abb75913faf4d43fdee375315b81ab903dd6adfc878f24fd80b",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libjc_weaver_transport.so",
+    "source": "odm/lib64/libjc_weaver_transport.so",
+    "source_sha256": "15f231410c48171aeb66deaa85af0da69a89604398e0893d9373e8eef011aa24",
+    "old_sha256": "897044ec27e57e57e5044f9bc379d5e2f5300c93898813f09a4892a534f0c940",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libkeymaster_messages.so",
+    "source": "vendor/lib64/libkeymaster_messages.so",
+    "source_sha256": "3dcb5c89c2d7a323799c236e54a302bdc9c77a973fcefd52eaf108a4774e0eca",
+    "old_sha256": "3dcb5c89c2d7a323799c236e54a302bdc9c77a973fcefd52eaf108a4774e0eca",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libkeymaster_portable.so",
+    "source": "vendor/lib64/libkeymaster_portable.so",
+    "source_sha256": "11d3ea375813959efc7338d7de68bce645a45ca8182e44ba851842d6e0dd64c5",
+    "old_sha256": "11d3ea375813959efc7338d7de68bce645a45ca8182e44ba851842d6e0dd64c5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libkeymasterdeviceutils.so",
+    "source": "vendor/lib64/libkeymasterdeviceutils.so",
+    "source_sha256": "9c46e6677993c018b1d99e975437d05a82e27b909aab0170d62b95b3eb8873a9",
+    "old_sha256": "930a112b4d867a17dfe7893ac2605b2a4fd684735ac33194b60a32a450cb3150",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libkeymasterprovision.so",
+    "source": "vendor/lib64/libkeymasterprovision.so",
+    "source_sha256": "0c75ee72a7244a40cd5ff761e1a1daa2db8f7ceffa5ef2eeba2c2ad28960fc14",
+    "old_sha256": "01f40395c21738a62dd36bc626a264e3bb4261e1738487557a56169492449cae",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libkeymasterutils.so",
+    "source": "vendor/lib64/libkeymasterutils.so",
+    "source_sha256": "35267b5f7d452cf5971d830ca9ca3f93c79811e0ddc70607b21944a769d027e6",
+    "old_sha256": "d583c56905af7033dd8a2346ad5685e09c9b933ff72e2dda0c3b774afe0705b7",
+    "elf_patches": [
+      {
+        "add_needed": "libcrypto-sdk35.so"
+      }
+    ]
+  },
+  {
+    "target": "vendor/lib64/libmdmdetect.so",
+    "source": "vendor/lib64/libmdmdetect.so",
+    "source_sha256": "10ff024a8bdb7ceacf0f56d8a63ba4a20625cbd98f3a338491294892a00ee7d3",
+    "old_sha256": "10ff024a8bdb7ceacf0f56d8a63ba4a20625cbd98f3a338491294892a00ee7d3",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libmemunreachable.so",
+    "source": "vendor/lib64/libmemunreachable.so",
+    "source_sha256": "2d83280c3a090df2bf9bf9fb4dd718eaf3dfb1cf2b374dae1c95c10d94b6bf60",
+    "old_sha256": "2d83280c3a090df2bf9bf9fb4dd718eaf3dfb1cf2b374dae1c95c10d94b6bf60",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libminkdescriptor.so",
+    "source": "vendor/lib64/libminkdescriptor.so",
+    "source_sha256": "175c1d9e790db91b81a6715124b0721e3f7dfc07fe5999f53516eb8a01e4b1b6",
+    "old_sha256": "4673ae517cecd19f1092dccd09cc09acb1bd59034a025f9d1763054d26fa81fb",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libminksocket_vendor.so",
+    "source": "vendor/lib64/libminksocket_vendor.so",
+    "source_sha256": "280035b9434e7b416172285d8e5dec91fbafc31bdb482ac3ca2c4de3a69e0827",
+    "old_sha256": "3ff270e3daf9845769705f663cb48b5982a33a622ccad27115f6ec65f30f0239",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libmisight.so",
+    "source": "vendor/lib64/libmisight.so",
+    "source_sha256": "5657dc92fbc7a638a35032df24b3115a4ee3a332bd9bf76bccf46fa7c1f7ff82",
+    "old_sha256": "963e34767bbd12e7b577c83c1e0438368f6ded2bd9127411408e1b459a3323a4",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libnetutils.so",
+    "source": "vendor/lib64/libnetutils.so",
+    "source_sha256": "dbf87b43ee4c4bf1c6b255b7768514ff471f42f80f6e32a1cb68cecf57accd63",
+    "old_sha256": "dbf87b43ee4c4bf1c6b255b7768514ff471f42f80f6e32a1cb68cecf57accd63",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libnicm.so",
+    "source": "vendor/lib64/libnicm.so",
+    "source_sha256": "6e15ba96cbeb6454b311c9e012fcc4ec4d7df95e9cce9e95458f8a8f22f98a48",
+    "old_sha256": "6e15ba96cbeb6454b311c9e012fcc4ec4d7df95e9cce9e95458f8a8f22f98a48",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libnicm_dsi.so",
+    "source": "vendor/lib64/libnicm_dsi.so",
+    "source_sha256": "633aa83d937bde0ad62b1b2da6e8ac4b3c62d8e0daa897794e3d7d049141de1c",
+    "old_sha256": "2428d2bd2453b20a18c38c7863db81ba210a1d0c2f9f9a37f69ea22ea74a6e51",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libnicm_utils.so",
+    "source": "vendor/lib64/libnicm_utils.so",
+    "source_sha256": "564dd0fa083de624fdd8269d8e6886bf2fa1cfbc63d593fde53b3fae4379a947",
+    "old_sha256": "fb591e58c421eecfb06199dcf0160674ef3bc598498b9047e6c2fb0882e06509",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libops.so",
+    "source": "vendor/lib64/libops.so",
+    "source_sha256": "1dfa1c956f07655e0036e3bbea42131867d56c9760c0ef7ad7ddcadfeadee1e3",
+    "old_sha256": "06e4963c017248b808a6625280373bbaa7fc60be7a2b6cc9d01cf02aa764fead",
+    "elf_patches": [
+      {
+        "replace_needed": [
+          "libbinder_ndk.so",
+          "libbinder_ndk-sdk35.so"
+        ]
+      }
+    ]
+  },
+  {
+    "target": "vendor/lib64/libpalclient.so",
+    "source": "vendor/lib64/libpalclient.so",
+    "source_sha256": "e23aded8135c7f1a4bf60a19301695666c4705efc89dfce71142629e49fb7c96",
+    "old_sha256": "17f222229e36cddd220aa3992feb3c2acea4310c07ade1069f5aa5557c3f26b8",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqcbor.so",
+    "source": "vendor/lib64/libqcbor.so",
+    "source_sha256": "c8465439937f4fc019ab2312c4fccf291c6a5cf47b908c5431ee8a685ce219c4",
+    "old_sha256": "c8465439937f4fc019ab2312c4fccf291c6a5cf47b908c5431ee8a685ce219c4",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqdi.so",
+    "source": "vendor/lib64/libqdi.so",
+    "source_sha256": "15de458c70a3d0fdeb08bfc6f08ce6fb00c7d59d83bbef6d59962b51f43e74d1",
+    "old_sha256": "d005bcf286983eadf4355cb10beb9b2bc4f6d1273f309f2f135ccd8b5a545bf6",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqdutils.so",
+    "source": "vendor/lib64/libqdutils.so",
+    "source_sha256": "984074c46d47e8b03c68aaee0039b65d4b16af19dd4465987c9e1f2c42453034",
+    "old_sha256": "7a1c2c11944b621b5986a9931e6ec9c027330ed20b3f5f2cc8766e3a714e64c3",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqisl.so",
+    "source": "vendor/lib64/libqisl.so",
+    "source_sha256": "819b0c27c88dd0704635533ba7fcd83e3b673eee12f19b9ccf5f9b6bf2f262f5",
+    "old_sha256": "819b0c27c88dd0704635533ba7fcd83e3b673eee12f19b9ccf5f9b6bf2f262f5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi.so",
+    "source": "vendor/lib64/libqmi.so",
+    "source_sha256": "2dfb0e2852d2a4632bec769d597da86fa4bac52df088f4765e9220329437baff",
+    "old_sha256": "8106c897e3624bfa0013e78c57948575ad8b6567e95c2f991c9e7d0c720a13b7",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi_cci.so",
+    "source": "vendor/lib64/libqmi_cci.so",
+    "source_sha256": "39dbcf3b8e0bb691446d63bf0eb2c3f231aa6a82a44d6967d4896a7ea124a600",
+    "old_sha256": "58975c007c6ac133e620135b3b2fa1867c15755c15a88a22feeaecc4b9e81e60",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi_client_helper.so",
+    "source": "vendor/lib64/libqmi_client_helper.so",
+    "source_sha256": "ec7e8d0be175329d2f5731daa2938450039b7a43abba13d91c0634b963924960",
+    "old_sha256": "4932a2c1fe4b4ee16d42f716bfa3bb7efe4019b219b07bce9ad7752a489fd72a",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi_client_qmux.so",
+    "source": "vendor/lib64/libqmi_client_qmux.so",
+    "source_sha256": "cc39a6a785166269ea5c2a1424f788b2daa2aac4af44b6d3fde47a2be41c3511",
+    "old_sha256": "81b2844fc2cfdfea2994ebc90204f93840b6d293070ca1bc60e82421a6aefb68",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi_common_so.so",
+    "source": "vendor/lib64/libqmi_common_so.so",
+    "source_sha256": "bebe076005437dff6b8decbb13564159994bec900e48b3601d6cc5f89a0d99e8",
+    "old_sha256": "bebe076005437dff6b8decbb13564159994bec900e48b3601d6cc5f89a0d99e8",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi_csi.so",
+    "source": "vendor/lib64/libqmi_csi.so",
+    "source_sha256": "135e6cdb974e960cf40911ca32cb991deb065f292f99edcf36b83b217c4fe532",
+    "old_sha256": "135e6cdb974e960cf40911ca32cb991deb065f292f99edcf36b83b217c4fe532",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmi_encdec.so",
+    "source": "vendor/lib64/libqmi_encdec.so",
+    "source_sha256": "d55f8998ad95e245fa373cd9b31172d1917fb3ae4aa4254b91557055fb501eae",
+    "old_sha256": "d55f8998ad95e245fa373cd9b31172d1917fb3ae4aa4254b91557055fb501eae",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqmiservices.so",
+    "source": "vendor/lib64/libqmiservices.so",
+    "source_sha256": "f0b05cc11410f8ca330ab2f52c4c833c4a0eef16dfafa6e504c0e7cdc7a9e556",
+    "old_sha256": "a9942fb9f4db868fd93a49b462937ecf1c0bf437b66e23802e9c3e0cd3e577e5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqrtr.so",
+    "source": "vendor/lib64/libqrtr.so",
+    "source_sha256": "ffde130127e6e237dbefa59400c9f6a715a42d1593398cca49e4512d80cdd731",
+    "old_sha256": "ffde130127e6e237dbefa59400c9f6a715a42d1593398cca49e4512d80cdd731",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqservice.so",
+    "source": "vendor/lib64/libqservice.so",
+    "source_sha256": "10f7aa5e41d316bfb51a66ef17bda7997caa8be00b8bcc661d351d0e6b289ced",
+    "old_sha256": "b45d517051ba856cfc02033e6124c455a37be19c881b850a02b216b7bfa75a4e",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqtikeymaster4.so",
+    "source": "vendor/lib64/libqtikeymaster4.so",
+    "source_sha256": "737069a1b82569f1648694f83f3d949ab4903456d8ecaed62c91c2c6a513e421",
+    "old_sha256": "b57a51c261c4fd21cddc264c0bd416a540602016ab4ba854b874a9c04df753b5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libqtikeymint.so",
+    "source": "vendor/lib64/libqtikeymint.so",
+    "source_sha256": "7291774d6b91ce96e4c7184a6ac061e2abe5e14208228e73321b6fc7846e94c4",
+    "old_sha256": "549448ab0e96e1dc77d228ccdd6d9c38ce1b720bdb102779a7e0347d53a65733",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/librecovery_updater.so",
+    "source": "vendor/lib64/librecovery_updater.so",
+    "source_sha256": "60f75a0ef9dbbb55a3bdaa3a075b9503cf81caf73f0ba710e9c33ee7fcf86a9b",
+    "old_sha256": "60f75a0ef9dbbb55a3bdaa3a075b9503cf81caf73f0ba710e9c33ee7fcf86a9b",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/librecovery_updater_msm.so",
+    "source": "vendor/lib64/librecovery_updater_msm.so",
+    "source_sha256": "d1c3050ba8d4611dee9a3bb2962a93b7a9fb44d1749e2173663a898d2099abb7",
+    "old_sha256": "d1c3050ba8d4611dee9a3bb2962a93b7a9fb44d1749e2173663a898d2099abb7",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/librpmb.so",
+    "source": "vendor/lib64/librpmb.so",
+    "source_sha256": "6591c9be95cbb61f803519e2560c02ff642f7175475ea31824bd5f2511ea0dff",
+    "old_sha256": "9bfb32089e4c3e71eb3aa2fa6ceebc659376551e5247638779a9bd3fb91f7458",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libseclog.so",
+    "source": "vendor/lib64/libseclog.so",
+    "source_sha256": "3a9a6626949bbd203ae780a91c404d497973807880c2b756e082e96b2988c1e5",
+    "old_sha256": "3a9a6626949bbd203ae780a91c404d497973807880c2b756e082e96b2988c1e5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libsoc_helper.so",
+    "source": "vendor/lib64/libsoc_helper.so",
+    "source_sha256": "209686e4ab2ce72b0c1e0722888552d9d2457d36096b792a067f93a20a6e0642",
+    "old_sha256": "87a1fb65b209b81bd09eaa3ca9e9a573642e0cb037e272d3307ab31df958b33a",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libspcom.so",
+    "source": "vendor/lib64/libspcom.so",
+    "source_sha256": "76719aece71759673d414afb08463eb28e10507e3cbf3bb5e7e5927c6d27b50f",
+    "old_sha256": "76719aece71759673d414afb08463eb28e10507e3cbf3bb5e7e5927c6d27b50f",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libspl.so",
+    "source": "vendor/lib64/libspl.so",
+    "source_sha256": "535351dc2ca4012d2592bcb2cc100cc8abfdeb2e77d4df4a935327815f489e84",
+    "old_sha256": "26bd1b59af2071a195949806e5a0129a0c454ace0150f4b10adface7f2a7166d",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libssd.so",
+    "source": "vendor/lib64/libssd.so",
+    "source_sha256": "2b43faa6785d690a7f1b42fcf5e329786556f3722cb107919ccd3bc9be277f0e",
+    "old_sha256": "466067585f8f8bdb06a5b73581255ff2609656a4a87f63fb9b6a7ffa5fdc6bc5",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libstnfc-streset.so",
+    "source": "vendor/lib64/libstnfc-streset.so",
+    "source_sha256": "36a00dad1bd507a47ecfdf05b09712f775dabf34994c99ab5dc1c54ecdb3ebfa",
+    "old_sha256": "b60b673fba21b376f29edb45e3d521cdccc93995b86bea3da8fdb496cfc18567",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libtaautoload.so",
+    "source": "vendor/lib64/libtaautoload.so",
+    "source_sha256": "2be544a4969f0749ff01653ef4604b58d5dbc3862d638ce559213b5a02b398eb",
+    "old_sha256": "5800e4714b5ed888705e9be959406182b45f9c38f29cc759cecdea5fdd8d570c",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libtime_genoff.so",
+    "source": "vendor/lib64/libtime_genoff.so",
+    "source_sha256": "c3070f2f05cbf0ab2c00d61844b15ecae5e53319a9c89db579f8418d7cbb0893",
+    "old_sha256": "c3070f2f05cbf0ab2c00d61844b15ecae5e53319a9c89db579f8418d7cbb0893",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libtinyalsa.so",
+    "source": "vendor/lib64/libtinyalsa.so",
+    "source_sha256": "a3b15bb383dff46229900d23c301985f8bf2617d65b14d354bcd04a2435516aa",
+    "old_sha256": "432975cd6a5f3d22e08faf4af0efee4574858a933a537bb1bcc77aa6b04b4414",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libvmmem.so",
+    "source": "vendor/lib64/libvmmem.so",
+    "source_sha256": "834938f12eeb8828d396acfa980381bad52d85054ecb7bf1f7c29dc41e7cf6d1",
+    "old_sha256": "834938f12eeb8828d396acfa980381bad52d85054ecb7bf1f7c29dc41e7cf6d1",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libxml.so",
+    "source": "vendor/lib64/libxml.so",
+    "source_sha256": "b114bb9c2801a47781882f3306c01138b21c2ceb1bebdabc59e577e8c49f0167",
+    "old_sha256": "b114bb9c2801a47781882f3306c01138b21c2ceb1bebdabc59e577e8c49f0167",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/mi_weaver.so",
+    "source": "odm/lib64/mi_weaver.so",
+    "source_sha256": "90bc222b3ad0f55bb1f481c3a99fc5c6cff36cc319ef7cd48321d3e148a75d06",
+    "old_sha256": "c55ad60a9372719bdff7cf5253e132b547ae39f2d65bc517bb9b44a241e0e01d",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.display.config@1.0.so",
+    "source": "vendor/lib64/vendor.display.config@1.0.so",
+    "source_sha256": "10748496256395250c548927eb6a62695e851facab5f07747b50429dc7b655b4",
+    "old_sha256": "10748496256395250c548927eb6a62695e851facab5f07747b50429dc7b655b4",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.display.config@2.0.so",
+    "source": "vendor/lib64/vendor.display.config@2.0.so",
+    "source_sha256": "91b992cbe238ad7c7663f9a05f6fed242f8106635264b0280f6d17875f882664",
+    "old_sha256": "91b992cbe238ad7c7663f9a05f6fed242f8106635264b0280f6d17875f882664",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so",
+    "source": "vendor/lib64/vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform.so",
+    "source_sha256": "9d016792030bbc665cbd45a7a36c059f5e5b5cec7b821bbe5b79972e3cda7448",
+    "old_sha256": "9d016792030bbc665cbd45a7a36c059f5e5b5cec7b821bbe5b79972e3cda7448",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so",
+    "source": "vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so",
+    "source_sha256": "11d834503923a184d493938cad39052f443c5dcbc108f47d11372696ff45acc2",
+    "old_sha256": "11d834503923a184d493938cad39052f443c5dcbc108f47d11372696ff45acc2",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.qti.hardware.pal-V1-ndk.so",
+    "source": "vendor/lib64/vendor.qti.hardware.pal-V1-ndk.so",
+    "source_sha256": "87cb2ea4185118bf15c7efa9e243a4c922cb98f9387077c72e43fdd0a1c2017a",
+    "old_sha256": "87cb2ea4185118bf15c7efa9e243a4c922cb98f9387077c72e43fdd0a1c2017a",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so",
+    "source": "vendor/lib64/vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk_platform.so",
+    "source_sha256": "17a731969721faf743ec4b4fd992fa4b4ca28d61f1520d367a4b0b0d87ab8b06",
+    "old_sha256": "9729471fbc143453adc36aab8976b2e1f2bd2e4654dacd8043ca83361e537f7f",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so",
+    "source": "vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so",
+    "source_sha256": "42aac267f8eda06f98ad9ab0e80a5f3fac6cf7e39134d29bd6f0b2935fc5e00d",
+    "old_sha256": "42aac267f8eda06f98ad9ab0e80a5f3fac6cf7e39134d29bd6f0b2935fc5e00d",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib/modules/qca_cld3_peach_v2.ko",
+    "source": "vendor_dlkm/lib/modules/qca_cld3_peach_v2.ko",
+    "source_sha256": "f27293b614852105348dc076f127b2b395f017cbaa238359278ac90994567004",
+    "old_sha256": "753dfc75f817ef495366ecf7404fc99263f46206b7aabeeae27d3c9a2d045857",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib/modules/1.1/rfkill.ko",
+    "source": "system_dlkm/flatten/lib/modules/rfkill.ko",
+    "source_sha256": "fb508e56c4fb97d827a8d00c3dbdda3bc56c021857e121dbf784fb3d5b9fdfcd",
+    "old_sha256": "bf7d99aa6117e865b9209f084cb04374baeef03e62bd37688130e5be779aa1fb",
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/libgralloctypes.so",
+    "source": "vendor/lib64/libgralloctypes.so",
+    "source_sha256": "0d606258c404f43abf5a1bf00e3eaf69d2815c6e35c976a982add3cf13b8037f",
+    "old_sha256": null,
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.graphics.common@1.2.so",
+    "source": "vendor/lib64/android.hardware.graphics.common@1.2.so",
+    "source_sha256": "0ba446df3bcd5d5ceb967eccd6f0fdb53f9cbbe382f8b0adb3d63822c5c5dc0e",
+    "old_sha256": null,
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.graphics.mapper@4.0.so",
+    "source": "vendor/lib64/android.hardware.graphics.mapper@4.0.so",
+    "source_sha256": "94ada40939e904046e1fb580af4f1b6b06e926fb2098eab2b97fde89f5cb9889",
+    "old_sha256": null,
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.graphics.common-V5-ndk.so",
+    "source": "vendor/lib64/android.hardware.graphics.common-V5-ndk.so",
+    "source_sha256": "3831356cc31bf38d8cac9a47eb4866fe9572b384ef5bb3e009882c38400b1668",
+    "old_sha256": null,
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.graphics.common@1.0.so",
+    "source": "vendor/lib64/android.hardware.graphics.common@1.0.so",
+    "source_sha256": "ceaf4165752a28a7d97b06191e7a649c6ab207c4d9b57c71736360120ca302ad",
+    "old_sha256": null,
+    "elf_patches": []
+  },
+  {
+    "target": "vendor/lib64/android.hardware.graphics.common@1.1.so",
+    "source": "vendor/lib64/android.hardware.graphics.common@1.1.so",
+    "source_sha256": "3ae665aa4df8a67b2249a576d4d342ab2cadc0d36092d6174b12a57ba8cb04cd",
+    "old_sha256": null,
+    "elf_patches": []
+  }
+]

@@ -1,0 +1,13 @@
+/*
+!/*/
+/clang-r530567/
+!/clang-r530567/*/
+/clang-r530567/lib/
+!/clang-r530567/lib/*/
+/clang-r530567/bin/
+/clang-r530567/lib/clang/
+/clang-r530567/lib/x86_64-unknown-linux-gnu/
+/clang-r547379/
+/clang-stable/
+/llvm-binutils-stable/
+/soong/

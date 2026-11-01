@@ -1,0 +1,11 @@
+/*
+!/*/
+/linux-x86/
+!/linux-x86/*/
+/linux-x86/1.83.0/
+/linux-musl-x86/
+!/linux-musl-x86/*/
+/linux-musl-x86/1.83.0/
+/soong/
+/bootstrap/
+/tests/

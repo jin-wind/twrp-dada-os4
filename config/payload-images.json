@@ -1,0 +1,26 @@
+{
+  "boot": {
+    "size": 100663296,
+    "sha256": "3e8f0134cb685336a4a9b84916036beb48cbee9b2310776c0406278bce83c9e8"
+  },
+  "modem": {
+    "size": 195686400,
+    "sha256": "8168fad8c7e40d9960f00bc455eb265a513160c93407b6ea1dc858b39f31afd3"
+  },
+  "odm": {
+    "size": 3656892416,
+    "sha256": "55e9e405aac9849210fce9395ac6bd4ff037f9caa6aecd72d5a9c65a16442449"
+  },
+  "system_dlkm": {
+    "size": 15294464,
+    "sha256": "9d6cb8dac717bb795f218debc857dd6b47815f2c121420241eaa57ab7a011670"
+  },
+  "vendor": {
+    "size": 689545216,
+    "sha256": "53c3a370fa02af67548d1774658ac9971f1e3f09fe78a647589e171160ffc82a"
+  },
+  "vendor_dlkm": {
+    "size": 88449024,
+    "sha256": "fcd10b8f61ce20331941b7974266d570c0fcaae7cd1564f18a28bb0350077be2"
+  }
+}

@@ -1,0 +1,120 @@
+diff --git a/BoardConfig.mk b/BoardConfig.mk
+index ccc9015..b47d6f1 100644
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -157,3 +157,7 @@ TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
+ TW_LOAD_PREBUILT_MODULES_AT_FIRST := true
+ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone1/temp" # CPU-0-0-0
+ TW_BACKUP_EXCLUSIONS := /data/fonts,/data/adb/ap,/data/adb/ksu
++
++# OS4.0.0.11.XOCMIXM (dada only), experimental local port.
++AB_OTA_PARTITIONS += recovery mi_ext mi_product
++TW_DEVICE_VERSION := dada-OS4-exp1
+diff --git a/recovery.fstab b/recovery.fstab
+index b91486b..46edbd0 100644
+--- a/recovery.fstab
++++ b/recovery.fstab
+@@ -51,6 +51,9 @@ odm                                                     /odm                   e
+ odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
+ mi_ext                                                  /mi_ext                ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
+ mi_ext                                                  /mi_ext                erofs   ro                                                   wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
++# OS4 adds mi_product to the dynamic partition set.
++mi_product /mi_product erofs ro wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
++mi_product /mi_product ext4 ro,barrier=1,discard wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
+ /dev/block/bootdevice/by-name/metadata                  /metadata              f2fs    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
+ /dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt,gc_merge   latemount,wait,formattable,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts:wrappedkey_v0,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
+ /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
+diff --git a/recovery/root/odm/bin/prepdecrypt.sh b/recovery/root/odm/bin/prepdecrypt.sh
+index 9ce2b5d..3acccd3 100644
+--- a/recovery/root/odm/bin/prepdecrypt.sh
++++ b/recovery/root/odm/bin/prepdecrypt.sh
+@@ -100,9 +100,29 @@ wait_for_service() {
+ 
+ # The HAL reads the version properties in its constructor and hands them to the
+ # TA, so it is left disabled until they match the installed system. Start it
+-# even when they could not be read: keystore2 blocks until KeyMint registers,
+-# and nothing decrypts without it.
++# only after the installed system and verified boot patch values match.
++# A blocked check leaves decryption unavailable without upgrading stored keys.
+ start_crypto_services() {
++	# This image is specifically for the verified OS4.0.0.11 payload. Never
++	# configure KeyMint using TWRP's fallback OS 99 / patch level 2099 values.
++	if [ "$(getprop ro.build.version.release)" != "17" ] ||
++	   [ "$(getprop ro.build.version.security_patch)" != "2026-09-01" ] ||
++	   [ "$(getprop ro.vendor.build.security_patch)" != "2026-09-01" ]; then
++		log_print 0 "OS4 port: refusing KeyMint with unexpected platform properties."
++		setprop twrp.port.crypto_blocked 1
++		setprop crypto.ready 0
++		return 1
++	fi
++	# Taken from com.android.build.boot.security_patch in the stock boot AVB
++	# metadata, not from the build tree's deliberately synthetic defaults.
++	$setprop_bin ro.bootimage.build.version.security_patch 2026-09-01
++	if [ "$(getprop ro.bootimage.build.version.security_patch)" != "2026-09-01" ]; then
++		log_print 0 "OS4 port: boot patch property could not be set correctly."
++		setprop twrp.port.crypto_blocked 1
++		setprop crypto.ready 0
++		return 1
++	fi
++	setprop twrp.port.crypto_blocked 0
+ 	log_print 1 "Starting KeyMint..."
+ 	setprop ctl.start vendor.keymint-qti
+ 	wait_for_service vendor.keymint-qti running
+@@ -125,7 +145,7 @@ finish() {
+ 			fi
+ 		fi
+ 	fi
+-	start_crypto_services
++	start_crypto_services || exit 2
+ 	setprop crypto.ready 1
+ 	log_print 1 "crypto.ready=$(getprop crypto.ready)"
+ 	log_print 1 "Script complete. Device ready for decryption."
+@@ -149,8 +169,8 @@ finish_error() {
+ 			fi
+ 		fi
+ 	fi
+-	start_crypto_services
+-	setprop crypto.ready 1
++	setprop twrp.port.crypto_blocked 1
++	setprop crypto.ready 0
+ 	log_print 0 "Script run incomplete. Device may not be ready for decryption."
+ 	exit 2
+ }
+diff --git a/recovery/root/odm/bin/variant-script.sh b/recovery/root/odm/bin/variant-script.sh
+index 9739d29..39eadab 100644
+--- a/recovery/root/odm/bin/variant-script.sh
++++ b/recovery/root/odm/bin/variant-script.sh
+@@ -30,7 +30,7 @@ set_vibrator_props() {
+ case "$variant" in
+ "dada")
+     model="$base_name"
+-    resetprop ro.twrp.device_version "Xiaomi_15"
++    resetprop ro.twrp.device_version "Xiaomi_15_OS4_exp1"
+     resetprop ro.twrp.y_offset "111"
+     resetprop ro.twrp.h_offset "-111"
+     resetprop vendor.display.enable_spr "1"
+diff --git a/recovery/root/system/etc/twrp.flags b/recovery/root/system/etc/twrp.flags
+index 88344f3..0426a51 100644
+--- a/recovery/root/system/etc/twrp.flags
++++ b/recovery/root/system/etc/twrp.flags
+@@ -5,6 +5,7 @@
+ # mount point          fstype  device                                     device2                 flags
+ 
+ # Logical partitions
++/mi_product ext4 mi_product flags=display="Mi_PRODUCT"
+ /mi_ext                ext4    mi_ext                                                             flags=display="Mi_EXT"
+ /system_ext            ext4    system_ext                                                         flags=display="System_EXT"
+ /system_dlkm           ext4    system_dlkm                                                        flags=display="System_DLKM"
+diff --git a/system.prop b/system.prop
+index 01da1f2..dc4a8bf 100644
+--- a/system.prop
++++ b/system.prop
+@@ -13,4 +13,7 @@ ro.charger.enable_suspend=1
+ vendor.usb.configfs=1
+ vendor.usb.rps_mask=0
+ vendor.usb.uvc.function.init=1
+-service.adb.tcp.port=5555
++
++# Identify this device-specific experimental build.
++ro.twrp.port.target=OS4.0.0.11.XOCMIXM
++ro.twrp.port.status=experimental
