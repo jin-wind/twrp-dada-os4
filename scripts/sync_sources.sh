@@ -10,7 +10,12 @@ git -C manifest add default.xml
 git -C manifest -c user.name=dada-build -c user.email=dada-build@users.noreply.github.com \
   commit -qm 'Pinned TWRP source manifest'
 git clone --depth=1 --branch v2.71 https://gerrit.googlesource.com/git-repo repo-tool
-[[ "$(git -C repo-tool rev-parse HEAD)" == c5340585b8175f91a483d6d0fe30724e6b277c0b ]]
+repo_revision=338ddb7d83ea35d5aef94d3c5d95c74fa3845780
+actual_revision="$(git -C repo-tool rev-parse HEAD)"
+if [[ "$actual_revision" != "$repo_revision" ]]; then
+  echo "Unexpected repo tool revision: $actual_revision (expected $repo_revision)" >&2
+  exit 1
+fi
 mkdir source
 cd source
 repo="$build_root/repo-tool/repo"
@@ -31,7 +36,11 @@ for item in 'prebuilts/clang/host/linux-x86:clang' 'prebuilts/rust:rust'; do
   cp "$project/config/$config-sparse-checkout" "$gitdir/info/sparse-checkout"
 done
 python3 "$repo" sync -l -c -j4 --fail-fast
-[[ "$(git -C .repo/repo rev-parse HEAD)" == c5340585b8175f91a483d6d0fe30724e6b277c0b ]]
+actual_revision="$(git -C .repo/repo rev-parse HEAD)"
+if [[ "$actual_revision" != "$repo_revision" ]]; then
+  echo "Unexpected installed repo tool revision: $actual_revision (expected $repo_revision)" >&2
+  exit 1
+fi
 mkdir -p device/xiaomi
 cp -a "$build_root/device" device/xiaomi/sm8750_thales
 prebuilts/clang/host/linux-x86/clang-r530567/bin/clang --version

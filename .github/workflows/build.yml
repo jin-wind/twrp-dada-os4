@@ -6,6 +6,10 @@ on:
 permissions:
   contents: read
 
+defaults:
+  run:
+    shell: bash
+
 concurrency:
   group: dada-os4-build
   cancel-in-progress: false
@@ -28,6 +32,11 @@ jobs:
         run: bash scripts/sync_sources.sh 2>&1 | tee artifacts/sync.log
       - name: Build and inspect recovery image
         run: bash scripts/build.sh 2>&1 | tee artifacts/build.log
+      - name: Require a flashable image and inspection report
+        run: |
+          test -s artifacts/twrp-dada-OS4.0.0.11-exp1.img
+          test -s artifacts/image-inspection.json
+          test -s artifacts/SHA256SUMS
       - name: Upload image and diagnostic reports
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
