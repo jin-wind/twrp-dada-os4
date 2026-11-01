@@ -7,10 +7,13 @@ mkdir -p "$build_root" "$project/artifacts"
 cd "$build_root"
 version=OS4.0.0.11.XOCMIXM
 package=dada_global-ota_full-OS4.0.0.11.XOCMIXM-user-17.0-19e034272e.zip
-curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 \
-  --output firmware.zip "https://bigota.d.miui.com/$version/$package" || \
-curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 \
-  --output firmware.zip "https://hugeota.d.miui.com/$version/$package"
+timeout 25m aria2c --split=16 --max-connection-per-server=16 --min-split-size=4M \
+  --file-allocation=none --connect-timeout=15 --timeout=30 \
+  --lowest-speed-limit=128K --max-tries=3 --retry-wait=5 \
+  --auto-file-renaming=false --allow-overwrite=true \
+  --console-log-level=warn --summary-interval=30 --download-result=full \
+  --out=firmware.zip "https://hugeota.d.miui.com/$version/$package" \
+  "https://bigota.d.miui.com/$version/$package"
 [[ "$(stat -c %s firmware.zip)" == 8766363938 ]]
 python3 "$project/scripts/extract_payload.py" --package firmware.zip \
   --output extracted --expected "$project/config/payload-images.json"

@@ -10,7 +10,7 @@ for path in /usr/share/dotnet /usr/local/lib/android /opt/ghc \
 done
 sudo apt-get update -qq
 sudo apt-get install -y --no-install-recommends \
-  git curl ca-certificates python3 python-is-python3 build-essential bc bison flex zip unzip \
+  git curl aria2 ca-certificates python3 python-is-python3 build-essential bc bison flex zip unzip \
   rsync cpio lz4 zstd xz-utils mtools patchelf fontconfig gperf \
   libncurses-dev libssl-dev libelf-dev libxml2-utils xsltproc \
   autoconf automake libtool pkg-config uuid-dev liblz4-dev libzstd-dev \
